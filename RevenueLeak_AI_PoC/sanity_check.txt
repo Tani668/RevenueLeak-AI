@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "orders_analysed": 6,
+    "cases_detected": 4,
+    "validated_cases": 4,
+    "net_unexplained_difference": 2335.0
+  },
+  "validation": {
+    "overall_status": "Passed with review flags",
+    "checks": [
+      {
+        "name": "Expected settlement arithmetic",
+        "passed": true,
+        "details": "Recomputed order amount minus commission, shipping, other fees and refunds."
+      },
+      {
+        "name": "One case per affected order",
+        "passed": true,
+        "details": "Checked that each affected order has a single consolidated case."
+      },
+      {
+        "name": "Evidence attached to every case",
+        "passed": true,
+        "details": "Every reported case must include at least one observable evidence statement."
+      },
+      {
+        "name": "Recommendation and priority present",
+        "passed": true,
+        "details": "Every case has a priority and a proposed human follow-up."
+      }
+    ]
+  },
+  "case_columns": [
+    "case_id",
+    "order_id",
+    "issue_type",
+    "expected_settlement",
+    "formula_settlement",
+    "settlement_amount",
+    "deposit_amount",
+    "unexplained_difference",
+    "evidence",
+    "has_settlement",
+    "has_refund",
+    "has_bank",
+    "duplicate_bank",
+    "explanation",
+    "priority",
+    "recommendation",
+    "case_status",
+    "validation_status"
+  ],
+  "case_rows": [
+    {
+      "case_id": "CASE-001",
+      "order_id": "ORD-1002",
+      "issue_type": "Settlement amount mismatch",
+      "priority": "Medium",
+      "validation_status": "Passed"
+    },
+    {
+      "case_id": "CASE-002",
+      "order_id": "ORD-1004",
+      "issue_type": "Bank deposit mismatch; Possible duplicate bank deposit",
+      "priority": "High",
+      "validation_status": "Passed"
+    },
+    {
+      "case_id": "CASE-003",
+      "order_id": "ORD-1005",
+      "issue_type": "Missing bank deposit",
+      "priority": "High",
+      "validation_status": "Passed"
+    },
+    {
+      "case_id": "CASE-004",
+      "order_id": "ORD-1006",
+      "issue_type": "Missing settlement record; Missing bank deposit",
+      "priority": "High",
+      "validation_status": "Passed"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+order_id,refund_amount,refund_status
+ORD-1003,100.0,processed
+ORD-1002,0.0,none
+ORD-1001,0.0,none
+ORD-1004,0.0,none
+ORD-1005,0.0,none
